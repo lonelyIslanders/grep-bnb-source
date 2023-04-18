@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>查询转账记录</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>查询BNB转账记录</h1>
+        <div class="input-container">
+            <p>包含合约转账记录</p>
+            <label for="address">请输入地址：</label>
+            <input type="text" id="address" placeholder="请输入地址" autocomplete="off">
+            <label for="date">请选择开始查询日期:</label>
+            <input type="date" id="date-input"><br>
+            <input type="submit" value="查询" onclick="getTransactions()">
+            <p id='pp'></p>
+        </div>
+    </div>
+    <table id="transactions">
+        <tr>
+            <th>时间</th>
+            <th>发送地址</th>
+            <th>接收地址</th>
+            <th>数量</th>
+            <th>交易哈希</th>
+        </tr>
+    </table>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
